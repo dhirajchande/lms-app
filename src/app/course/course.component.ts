@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CoursesService } from '../servies/courses.service';
 
@@ -7,8 +7,27 @@ import { CoursesService } from '../servies/courses.service';
   templateUrl: './course.component.html',
   styleUrls: ['./course.component.scss']
 })
-export class CourseComponent {
+export class CourseComponent implements OnInit {
 
-  constructor(private router:ActivatedRoute, private cs: CoursesService){}
+  courseId:any;
+  courseObject:any;
+
+  constructor(private router:ActivatedRoute, private cs: CoursesService){
+    router.params.subscribe(data=>{
+      this.courseId=data['id'];
+
+      this.cs.loadById(this.courseId).subscribe((data:any)=>{
+        this.courseObject=data[0];
+
+      })
+    })
+  
+  }
+  ngOnInit(): void {
+    
+  }
+
+
+
 
 }

@@ -1,1 +1,44 @@
-<p>course works!</p>
+<!-- <div class="container">
+    <div class="card" style="width: 18rem;">
+        <img src="{{courseObject.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{courseObject.name}}</h5>
+            <p class="card-text">{{courseObject.description}}</p>
+        </div>
+    </div>
+</div> -->
+
+<main class="bg-black">
+
+
+<div class="container">
+    <div class="row  text-white  pt-5 pb-5">
+        <div class="col col-md-9">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#" class="text-white">Home</a></li>
+                  <li class="breadcrumb-item "><a href="#" class="text-white">Courses</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">{{courseObject.name}}</li>
+                </ol>
+              </nav>
+            <h1>
+                {{courseObject.name}}
+            </h1>
+            <p>{{courseObject.description}}</p>
+
+        </div>
+        <div class="col col-md-3">
+
+            <div class="card" style="width: 18rem;">
+                <img src="{{courseObject.image}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title text-black" >449 INR</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                
+                  <a href="#" class="btn btn-primary">Enroll Now</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+</main>

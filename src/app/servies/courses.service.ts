@@ -13,4 +13,8 @@ export class CoursesService {
   getCourses(){
    return this.http.get("http://localhost:3000/api/courses")
   }
+
+  loadById(courseId:any){
+    return this.http.get("http://localhost:3000/api/courses/"+ courseId);
+  }
 }
